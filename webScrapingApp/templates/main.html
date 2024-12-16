@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning News</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #009688;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-style: italic;
+            color: #777;
+            text-align: center;
+            padding: 25%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Machine Learning News</h1>
+
+    {% if news_titles %}
+        <ul>
+            {% for title in news_titles %}
+                <li>{{ title }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No machine learning news available at the moment.</p>
+    {% endif %}
+</body>
+</html>
